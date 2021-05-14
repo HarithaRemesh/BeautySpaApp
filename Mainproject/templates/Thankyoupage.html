@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+ .body, html {
+  height: 100%;
+  }
+.bg
+{
+    background-color:#edeff2;
+}
+.display-3
+  {
+
+  font-family: "Lucida Handwriting";
+  margin-top: 175px;
+  fontsize:30px;
+
+  }
+  .lead
+  {
+  font-family: "Lucida Handwriting";
+  fontsize:30px;
+  }
+#homepage
+{
+  background-color: black;
+  color: white;
+}
+#homepage:hover
+{
+  background-color:gray;
+}
+</style>
+<body class="bg">
+<div class="jumbotron text-center" align="center">
+  <h1 class="display-3">Thank You!</h1>
+  <p class="lead"><strong>Your Request is Pending Now. We Will Update you soon...</strong> </p>
+<br>
+  <p class="lead">
+    Having trouble? <a href="{% url 'contact' %}">Contact us</a>
+  </p>
+<br>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" id="homepage" href="{% url 'home' %}" role="button">Continue to homepage</a>
+  </p>
+</div>
+</body>
+</html>

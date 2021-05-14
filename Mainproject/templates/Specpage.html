@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!--  <link rel="stylesheet" type="text/css" href="style.css">-->
+
+<style>
+ .body, html {
+  height: 100%;
+  }
+
+  .bg {
+  /* The image used */
+  background-image: url("https://wallpapercave.com/wp/wp7885113.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.labelclass
+{
+ font-family: "Lucida Handwriting";
+ font-size: 20px;
+ color:white;
+ display: table-cell;
+}
+.labels
+{
+ font-family: "Lucida Handwriting";
+ font-size: 20px;
+ color:white;
+ line-height:55px
+
+
+}
+.inputtype
+{
+
+  background-color: white;
+  color: black;
+  font-size:15px;
+  font-family:Lucida Handwriting;
+
+}
+
+#Appbtn
+{
+  background-color: white;
+  font-family: "Lucida Handwriting";
+  padding: 12px 20px;
+  fontsize:30px;
+}
+#Appbtn:hover
+{
+  background-color: grey;
+}
+#bookbtn
+{
+  background-color: white;
+  font-family: "Lucida Handwriting";
+  padding: 12px 20px;
+  fontsize:30px;
+  margin-left:175px
+
+}
+#bookbtn:hover
+{
+  background-color: black;
+}
+#head1
+{
+font-size: 30px;
+}
+</style>
+</head>
+<body class="bg">
+<form action="book_appointment" method="post">
+  {% csrf_token%}
+  <div class="container" >
+    <br>
+    <br>
+    <br>
+    <label class="labelclass" id="head1"><b>Request an appointment</b></label><br>
+    <table class="appointment">
+     <tr>
+      <td><label class="labels" ><b>Select your District:  </b></label></td>
+       <td><select class="district" name="district">
+          <option selected>Ernakulam</option>
+          <option>Alappuzha</option>
+           <option>Thrissur</option> </select></td></tr>
+     <tr>
+      <td><label class="labels" ><b>Select Services</b></label></td>
+         <td><select class="services" name="services">
+          <option selected>select</option>
+          <option>Express clean-up-₹ 700</option>
+            <option>Tan removal pack-₹ 500</option>
+            <option>Fresh fruit facial - ₹ 750 To ₹ 2000</option>
+            <option>Pearl facial - ₹1250 To ₹ 2500</option>
+            <option>Gold facial-₹ 2800</option>
+             <option>Diamond facial-₹ 3500</option>
+            <option>Platinum-₹ 4000</option>
+            <option>face & neck oxy bleach- ₹ 750</option>
+             <option>Manicure-₹ 500</option>
+             <option> Pedicure-₹ 750</option>
+             <option>Nail cut-₹ 100</option>
+             <option>Full body waxing-₹ 2750</option>
+             <option>Full Legs waxing- ₹ 850</option>
+             <option> Half leg waxing-₹ 500</option>
+             <option>Underarms waxing-₹ 200</option>
+             <option>Half arms waxing-₹ 300</option>
+             <option>Full arms waxing-₹ 550</option>
+             <option>Back body waxing-₹ 600</option>
+             <option>Threading-Eyebrows-₹ 50</option>
+             <option>Threading-Upperlip-₹ 20</option>
+             <option>Threading-Chin-₹ 30</option>
+             <option>Threading-Forehead-₹ 20</option>
+             <option>Threading-Full face-₹150</option>
+             <option>Haircut and blowdry -₹ 750</option>
+             <option>Basic trim and split-end removal-₹ 300</option>
+             <option>Flat ironing-₹ 1200</option>
+             <option>Basic blow dry-₹ 500</option>
+             <option>Hair spa-₹ 1100</option>
+             <option>Hair color-₹ 900</option>
+             <option>Henna-₹ 500</option>
+             <option>Head massage-₹ 500</option>
+             <option>Saree Draping- ₹ 1000</option>
+             <option>Hair Dressing- ₹ 1000</option>
+             <option>Face Makeup- ₹ 1000</option>
+         </select></td>
+     </tr>
+        <tr>
+      <td><label class="labels"  ><b>Service required location :  </b></label></td>
+      <td><input type="text" placeholder="Palarivattom, Kochi" class="inputtype"  name="location"></td>
+     </tr>
+         <tr>
+      <td><label class="labels" ><b>When do you want the Service? : </b></label></td>
+         <td><input type="text" placeholder="DD/MM/YYYY" class="inputtype"  name="date"></td>
+     </tr>
+        <tr>
+      <td><label class="labels" ><b>Select Time</b></label></td>
+         <td><select class="district" name="time">
+          <option selected>select</option>
+          <option>9 Am-12 Pm</option>
+          <option>1 Pm-4 Pm</option>
+         </select>
+     </tr>
+    <tr>
+      <td><label class="labels"><b>Full name :  </b></label></td>
+      <td><input type="text" class="inputtype" name="name"></td>
+     </tr>
+    <tr>
+      <td><label class="labels"><b>Phone Number :  </b></label></td>
+      <td><input type="text" class="inputtype" name="phone"></td>
+     </tr>
+
+    </table>
+    </div>
+  <br>
+  <div align="left">
+  <button type="submit" class="btn " id="bookbtn" value="book_appointment">Confirm your Appointment</button>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+ .body, html {
+  height: 100%;
+
+  }
+  .bg
+  {
+    background-color:#edeff2;
+  }
+ .tabledata
+  {
+     font-family: "Lucida Handwriting";
+ font-size: 20px;
+ color:black;
+
+
+  }
+ #head
+ {
+ font-family: "Lucida Handwriting";
+ font-size: 20px;
+ margin-top:145px;
+ }
+
+</style>
+<body class="bg">
+<div class="jumbotron text-center">
+  <div class="container text-center" id="head">
+    <h1>Contact US</h1>
+    <table align="center" class="tabledata">
+      <tr>
+        <td>Queen Beauty Parlour</td>
+      </tr>
+      <tr>
+        <td>Oberon Mall, Idapally</td>
+      </tr>
+      <tr>
+        <td>Kochi-24</td>
+      </tr>
+      <tr>
+        <td>Contact Number: 8157019365</td>
+      </tr>
+      <tr>
+        <td>Email address: queenbeautyspa@gmail.com</td>
+      </tr>
+    </table>
+    <br>
+
+      <div align="center">
+  <p class="para">
+    <a class="btn btn-primary btn-sm" id="homepage" href="{% url 'home' %}" role="button">Continue to homepage</a>
+  </p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

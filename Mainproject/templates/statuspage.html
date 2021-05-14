@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!--  <link rel="stylesheet" type="text/css" href="style.css">-->
+
+<style>
+ .body, html {
+  height: 100%;
+  }
+.bg
+{
+  background-color:#edeff2;
+}
+.labelclass
+{
+ font-family: "Lucida Handwriting";
+ font-size: 20px;
+ color:black;
+ display: table-cell;
+}
+.labels
+{
+ font-family: "Lucida Handwriting";
+ font-size: 20px;
+ line-height:55px
+
+
+}
+.inputtype
+{
+
+  background-color: black;
+  color: white;
+  font-size:15px;
+  font-family:Lucida Handwriting;
+
+}
+
+#Appbtn
+{
+
+  font-family: "Lucida Handwriting";
+  padding: 12px 20px;
+  fontsize:30px;
+}
+#bookbtn:hover
+{
+  background-color: gray;
+}
+#bookbtn
+{
+  background-color: black;
+  color:white;
+  font-family: "Lucida Handwriting";
+  padding: 12px 20px;
+  fontsize:30px;
+
+
+}
+.para
+{
+   background-color: black;
+  color: white;
+  font-size:25px;
+  font-family:Lucida Handwriting;
+
+}
+#homepage
+{
+  background-color: white;
+  color: black;
+}
+#homepage:hover
+{
+  background-color: gray;
+
+}
+#contact
+{
+  background-color: white;
+  color: black;
+}
+#contact:hover
+{
+  background-color: gray;
+
+}
+#head1
+{
+font-size: 30px;
+}
+</style>
+</head>
+<body class="bg">
+<form action="status_check" method="post">
+  {% csrf_token%}
+
+  <div class="container" align="center" >
+    <br>
+    <br>
+    <br>
+    <label class="labelclass" id="head1"><b>Know Your Appointment Status</b></label><br>
+    <table class="status">
+     <tr>
+      <td><label class="labels" ><b>Enter you Phone Number    </b></label></td>
+         <td><input type="text" class="inputtype" name="phonenum"></td>
+     </tr>
+    </table>
+    <br>
+  <button type="submit" class="btn " id="bookbtn" value="status_check">Click to know your status</button>
+  </div>
+  <br>
+  <br>
+  <div align="center">
+    <p class="para">{{msg1}}</p>
+    <p class="para">{{msg2}}</p>
+  </div>
+  <div align="center">
+  <p class="para">
+    <a class="btn btn-primary btn-sm" id="homepage" href="{% url 'home' %}" role="button">Continue to homepage</a>
+  </p>
+    </div>
+   <div align="center">
+     <br>
+  <p class="para">
+    <a class="btn btn-primary btn-sm"  id="contact" href="{% url 'contact' %}" role="button">Contact Us , if you have any trouble</a>
+  </p>
+    </div>
+</form>
+</body>
+</html>
